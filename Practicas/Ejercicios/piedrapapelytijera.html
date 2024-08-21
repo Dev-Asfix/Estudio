@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Piedra, Papel y Tijera</title>
+    <script>
+        // Función para generar un número aleatorio entre min y max 
+        function numeroAleatorio(max, min){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        // Genera un número aleatorio 
+        let pc = numeroAleatorio(3, 1);
+        
+        // Pide al usuario que elija
+        let jugador = prompt("Elige 1 para piedra, 2 para papel, 3 para tijera");
+
+        // Valida y muestra la elección del jugador
+        if (jugador == 1) {
+            alert("Elegiste piedra");
+        } else if (jugador == 2) {
+            alert("Elegiste papel");
+        } else if (jugador == 3) {
+            alert("Elegiste tijera");
+        } else {
+            alert("Elección inválida");
+        }
+
+        // Valida y muestra la elección de la PC
+        if (pc == 1) {
+            alert("PC eligió piedra");
+        } else if (pc == 2) {
+            alert("PC eligió papel");
+        } else if (pc == 3) {
+            alert("PC eligió tijera");
+        }
+
+        // Lógica para determinar el resultado del juego
+        if (jugador == pc) {
+            alert("Empate");
+        } else if (jugador == 1 && pc == 3) {
+            alert("¡Ganaste! Piedra gana sobre tijera");
+        } else if (jugador == 2 && pc == 1) {
+            alert("¡Ganaste! Papel gana sobre piedra");
+        } else if (jugador == 3 && pc == 2) {
+            alert("¡Ganaste! Tijera gana sobre papel");
+        } else {
+            alert("¡Perdiste! La PC gana esta ronda");
+        }
+    </script>
+</head>
+<body>
+    <h1>Juego de Piedra, Papel y Tijera</h1>
+    
+</body>
+</html>
