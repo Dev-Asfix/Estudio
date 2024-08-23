@@ -5,6 +5,13 @@ let vidasEnemigo = 3;
 
 
 function iniciarJuego(){
+
+    let sectionSeleccionarAtaque = document.getElementById('s-ataques');
+    sectionSeleccionarAtaque.style.display = 'none';
+
+    let sectionSeleccionarReiniciar = document.getElementById('s-reiniciar');
+    sectionSeleccionarReiniciar.style.display = 'none';
+
     let botonMascotaJugador = document.getElementById('btn-mascotas');
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador);
 
@@ -20,6 +27,12 @@ function iniciarJuego(){
 }
 
 function seleccionarMascotaJugador(){
+
+    let sectionSeleccionarMascota = document.getElementById('s-mascotas');
+    sectionSeleccionarMascota.style.display = 'none';
+
+    let sectionSeleccionarAtaque = document.getElementById('s-ataques');
+    sectionSeleccionarAtaque.style.display = 'block';
 
     let inputHipodoge = document.getElementById('hipodoge');
     let inputCapipepo = document.getElementById('capipepo');
@@ -106,6 +119,9 @@ function crearMensajeFinal(resultadoFinal){
     botonAgua.disabled = true;
     let botonTierra = document.getElementById('btn-tierra');
     botonTierra.disabled = true;
+
+    let sectionSeleccionarReiniciar = document.getElementById('s-reiniciar');
+    sectionSeleccionarReiniciar.style.display = 'block';
 
 }
 
