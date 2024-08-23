@@ -77,8 +77,12 @@ function ataqueAleatorioEnemigo(){
     } else {
         ataqueEnemigo = 'Error';
     }
-    ataqueEnemigo
+    crearMensaje();
+}
 
+function crearMensaje(){
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML = "Tu mascota ataco con"+ataqueJugador +", la Mascota del enemigo ataco con " + ataqueEnemigo+" - GANASTE 🎉";
 }
 
 
