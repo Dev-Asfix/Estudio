@@ -74,36 +74,34 @@ function ataqueAleatorioEnemigo(){
         ataqueEnemigo = 'AGUA'
     } else if(ataqueAleatorio == 3){
         ataqueEnemigo= 'TIERRA'
-    } else {
-        ataqueEnemigo = 'Error';
-    }
-    crearMensaje();
+    } 
+    combate();
 }
 
-function crearMensaje(){
+function crearMensaje(resultado){
 let sectionMensaje = document.getElementById('s-mensajes');
 
     let parrafo = document.createElement('p');
-    parrafo.innerHTML = "Tu mascota ataco con "+ataqueJugador +", la Mascota del enemigo ataco con " + ataqueEnemigo+" - GANASTE 🎉";
+    parrafo.innerHTML = "Tu mascota ataco con "+ataqueJugador +", la Mascota del enemigo ataco con " + ataqueEnemigo +" "+resultado;
 
     sectionMensaje.appendChild(parrafo);
 }
 
 function combate(){
-    if (jugador == pc) {
-        alert("Empate");
-    } else if (jugador == 1 && pc == 3) {
-        alert("¡Ganaste! Piedra gana sobre tijera");
-        triunfo = triunfo +1;
-    } else if (jugador == 2 && pc == 1) {
-        alert("¡Ganaste! Papel gana sobre piedra");
-        triunfo = triunfo +1;
-    } else if (jugador == 3 && pc == 2) {
-        alert("¡Ganaste! Tijera gana sobre papel ");
-        triunfo = triunfo +1;
+    if (ataqueEnemigo == ataqueJugador) {
+        crearMensaje("Empate");
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
+        crearMensaje("¡Ganaste!");
+        
+    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
+        crearMensaje("¡Ganaste!");
+        
+    } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
+        crearMensaje("¡Ganaste!");
+        
     } else {
-        alert("¡Perdiste! La PC gana esta ronda ");
-        perdida = perdida +1;
+        crearMensaje("¡Perdiste!");
+        
     }
 }
 
