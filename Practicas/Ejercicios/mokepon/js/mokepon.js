@@ -89,6 +89,24 @@ let sectionMensaje = document.getElementById('s-mensajes');
     sectionMensaje.appendChild(parrafo);
 }
 
+function combate(){
+    if (jugador == pc) {
+        alert("Empate");
+    } else if (jugador == 1 && pc == 3) {
+        alert("¡Ganaste! Piedra gana sobre tijera");
+        triunfo = triunfo +1;
+    } else if (jugador == 2 && pc == 1) {
+        alert("¡Ganaste! Papel gana sobre piedra");
+        triunfo = triunfo +1;
+    } else if (jugador == 3 && pc == 2) {
+        alert("¡Ganaste! Tijera gana sobre papel ");
+        triunfo = triunfo +1;
+    } else {
+        alert("¡Perdiste! La PC gana esta ronda ");
+        perdida = perdida +1;
+    }
+}
+
 
 function numeroAleatorio(min , max){
     return Math.floor(Math.random()*(max-min+1)+min);
