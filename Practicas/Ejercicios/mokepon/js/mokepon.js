@@ -89,6 +89,16 @@ let sectionMensaje = document.getElementById('s-mensajes');
     sectionMensaje.appendChild(parrafo);
 }
 
+function crearMensajeFinal(resultadoFinal){
+    let sectionMensaje = document.getElementById('s-mensajes');
+    
+        let parrafo = document.createElement('p');
+        parrafo.innerHTML = resultadoFinal;
+    
+        sectionMensaje.appendChild(parrafo);
+    }
+
+
 function combate(){
     let spanVidasJugador = document.getElementById('vidas-jugador');
     let spanVidasEnemigo = document.getElementById('vidas-enemigo');
@@ -98,17 +108,17 @@ function combate(){
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
         crearMensaje("¡Ganaste!");
         vidasEnemigo--;
-        spanVidasEnemigo.innerHTML= vidasJugador;
+        spanVidasEnemigo.innerHTML= vidasEnemigo;
         
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
         crearMensaje("¡Ganaste!");
         vidasEnemigo--;
-        spanVidasEnemigo.innerHTML= vidasJugador;
+        spanVidasEnemigo.innerHTML= vidasEnemigo;
         
     } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
         crearMensaje("¡Ganaste!");
         vidasEnemigo--;
-        spanVidasEnemigo.innerHTML= vidasJugador;
+        spanVidasEnemigo.innerHTML= vidasEnemigo;
         
     } else {
         crearMensaje("¡Perdiste!");
@@ -116,8 +126,18 @@ function combate(){
         spanVidasJugador.innerHTML= vidasJugador;
         
     }
+
+    revisarVidas();
 }
 
+function revisarVidas(){
+    if(vidasEnemigo ==0){
+        crearMensajeFinal('Felicidades Ganaste');
+    } else if(vidasJugador == 0){
+        crearMensajeFinal('Lo siento, perdiste :(');
+
+    }
+}
 
 function numeroAleatorio(min , max){
     return Math.floor(Math.random()*(max-min+1)+min);
