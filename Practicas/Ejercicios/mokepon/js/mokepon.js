@@ -14,6 +14,9 @@ function iniciarJuego(){
     botonAgua.addEventListener('click',ataqueAgua);
     let botonTierra = document.getElementById('btn-tierra');
     botonTierra.addEventListener('click',ataqueTierra);
+
+    let botonReiniciar = document.getElementById('btn-reiniciar');
+    botonReiniciar.addEventListener('click',reiniciarJuego);
 }
 
 function seleccionarMascotaJugador(){
@@ -92,11 +95,21 @@ let sectionMensaje = document.getElementById('s-mensajes');
 function crearMensajeFinal(resultadoFinal){
     let sectionMensaje = document.getElementById('s-mensajes');
     
-        let parrafo = document.createElement('p');
-        parrafo.innerHTML = resultadoFinal;
+    let parrafo = document.createElement('p');
+    parrafo.innerHTML = resultadoFinal;
     
-        sectionMensaje.appendChild(parrafo);
-    }
+    sectionMensaje.appendChild(parrafo);
+    
+    let botonFuego = document.getElementById('btn-fuego');
+    botonFuego.disabled = true;
+    let botonAgua = document.getElementById('btn-agua');
+    botonAgua.disabled = true;
+    let botonTierra = document.getElementById('btn-tierra');
+    botonTierra.disabled = true;
+
+}
+
+
 
 
 function combate(){
@@ -137,6 +150,10 @@ function revisarVidas(){
         crearMensajeFinal('Lo siento, perdiste :(');
 
     }
+}
+
+function reiniciarJuego(){
+    location.reload();
 }
 
 function numeroAleatorio(min , max){
