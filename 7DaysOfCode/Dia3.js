@@ -17,7 +17,7 @@ while(intentos <3){
                 alert('Genial , C# es un Buen Lenguaje');
                 intentoBack = 4;
             } else {
-                alert('Elige un numero correcto, tienes '+(3 - intentoBack) + "Intentos");
+                alert('Elige un numero correcto, tienes '+(3 - intentoBack) + " Intentos");
                 especialidadBackend = prompt('Quieres aprender \nJava = 1  \nC# = 2 \nElige un numero ');
                 intentoBack ++;
 
@@ -41,7 +41,7 @@ while(intentos <3){
                 alert('Genial , Vue es un buen Framework');
                 intentoFront = 4;
             } else {
-                alert('Elige un numero correcto, tienes '+(3 - intentoBack) + "Intentos");
+                alert('Elige un numero correcto, tienes '+(3 - intentoFront) + " Intentos");
                 especialidadFrontend = prompt('Quieres aprender \nReact = 1  \nVue = 2 \nElige un numero ');
                 intentoFront ++;
 
