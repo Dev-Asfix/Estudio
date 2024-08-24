@@ -21,6 +21,8 @@ console.log(0 === false);
 
 
 
+
+
 // Comparaciones con != y !==
 console.log("10" != 10);   
 // false: El operador `!=` compara valores después de la conversión de tipos.
