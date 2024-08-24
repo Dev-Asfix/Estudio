@@ -18,6 +18,9 @@ console.log(0 === false);
 // Aquí, 0 es un número y false es un booleano, por lo que no son iguales. 
 // La comparación es falsa.
 
+
+
+
 // Comparaciones con != y !==
 console.log("10" != 10);   
 // false: El operador `!=` compara valores después de la conversión de tipos.
@@ -36,6 +39,10 @@ console.log(null == undefined);
 console.log(null === undefined);
 // false: Aunque `null` y `undefined` son similares, no son estrictamente iguales. 
 // Con `===`, la comparación devuelve falso porque son de tipos diferentes.
+
+
+
+
 
 // Comparaciones numéricas y de cadenas
 console.log(7 > 5);    
@@ -56,6 +63,12 @@ console.log(3 <= 3);
 console.log("apple" < "banana"); 
 // true: JavaScript compara cadenas de texto usando el orden lexicográfico (como en un diccionario).
 // Aquí, "apple" viene antes que "banana", por lo tanto, la comparación es verdadera.
+
+
+
+
+
+
 
 // Operadores lógicos && (AND) y || (OR)
 console.log(5 > 3 && 2 < 4);  
@@ -82,6 +95,13 @@ console.log(null || "hello");
 // "hello": `null` es un valor falso en JavaScript, mientras que "hello" es un valor verdadero.
 // Como `||` retorna el primer valor verdadero, la expresión retorna "hello".
 
+
+
+
+
+
+
+
 // Operador ! (NOT)
 console.log(!true);          
 // false: `!` es el operador de negación. 
@@ -99,6 +119,12 @@ console.log(!!"text");
 // true: `!!` es una doble negación, que convierte un valor a su valor booleano.
 // Una cadena de texto no vacía es considerada verdadera, por lo que `!!"text"` es `true`.
 
+
+
+
+
+
+
 // Combinaciones complejas
 console.log((5 > 3 && 2 < 4) || (5 < 3 && 2 > 4)); 
 // true: Primero, `&&` evalúa ambas condiciones dentro de cada paréntesis. 
@@ -109,6 +135,12 @@ console.log(!(5 == 5) && (true || false));
 // false: `(5 == 5)` es verdadero, pero `!` invierte esto a falso.
 // `true || false` es verdadero, pero como `&&` requiere que ambas condiciones sean verdaderas,
 // toda la expresión es falsa.
+
+
+
+
+
+
 
 // Comparaciones de tipos mixtos
 console.log("5" > 2);        
@@ -124,5 +156,5 @@ console.log("true" == true);
 // La comparación entre una cadena y un booleano es falsa.
 
 console.log("false" === false); 
-// false: La cadena "false" y el booleano `false` son de tipos diferentes. 
+// false: La cadena "false" y el booleano `false` son de tipos diferentes.. 
 // El operador `===` no realiza ninguna conversión de tipo, por lo que la comparación es falsa.
