@@ -1,38 +1,61 @@
+// Inicializa las categorías y la lista de compras
+let categorias = {
+    Frutas: [],
+    Lácteos: [],
+    Congelados: [],
+    Dulces: [],
+    Otros: [] // Para alimentos que no encajan en las categorías predefinidas
+};
 
-let filtro = parseInt(prompt('Quiere guardar SI : 1 - NO 2'),10);
-    if(filtro == 1){
-
-        let parametro = parseInt(prompt('Cuantos nombres quieres ingresar ?'),10);
-        let nombre = ""; 
-        let numero = 0; 
-        let intento = 0;
-        let filtroNombre = [[],[],[]];
-
-        while(intento < parametro ){
-                
-
-                nombre = prompt('Ingrese el nombre');
-                numero = parseInt(prompt('Ingrese la categoria 1 - 2 - 3'),10);
-                
-                if(numero >= 1 && numero <=3){
-                    filtroNombre[numero -1].push(nombre);
-                    intento ++;
-                } else {
-                    alert('Numero categoria incorrecto');
-                }
-        }
-        
-        for(let i = 0; i< filtroNombre.length; i++){
-            console.log(`categoria ${i+1}: ${filtroNombre[i].join(', ')}`);
-        }
+// Función para agregar alimentos a la lista de compras
+function agregarAlimento() {
+    let continuar = prompt('¿Deseas agregar un alimento a tu lista de compras? Responde "sí" o "no"').toLowerCase();
     
-    
-    } else if(filtro == 2){
-        console.log('No se guardaron nombres.');
-    } else {
-        alert('numero incorrecto. Por favor ingresa 1 par Si , o 2 para NO.')
+    // Mientras el usuario quiera seguir agregando alimentos
+    while (continuar === 'sí') {
+        let alimento = prompt('¿Qué alimento deseas agregar?');
+        let categoria = prompt('¿En qué categoría se encaja ese alimento? (Frutas, Lácteos, Congelados, Dulces, Otros)').toLowerCase();
+
+        // Añade el alimento a la categoría correspondiente
+        switch (categoria) {
+            case 'frutas':
+                categorias.Frutas.push(alimento);
+                break;
+            case 'lácteos':
+                categorias.Lácteos.push(alimento);
+                break;
+            case 'congelados':
+                categorias.Congelados.push(alimento);
+                break;
+            case 'dulces':
+                categorias.Dulces.push(alimento);
+                break;
+            default:
+                categorias.Otros.push(alimento);
+                break;
+        }
+
+        // Pregunta si el usuario desea agregar otro alimento
+        continuar = prompt('¿Deseas agregar otro alimento a tu lista de compras? Responde "sí" o "no"').toLowerCase();
     }
 
+    // Muestra la lista de compras organizada por categorías
+    mostrarLista();
+}
 
+// Función para mostrar la lista de compras
+function mostrarLista() {
+    console.log('Lista de compras:');
+    for (const [categoria, alimentos] of Object.entries(categorias)) {
+        if (alimentos.length > 0) {
+            console.log(`${categoria}: ${alimentos.join(', ')}`);
+        } else {
+            console.log(`${categoria}: `);
+        }
+    }
+}
+
+// Llama a la función para comenzar el proceso
+agregarAlimento();
 
 
