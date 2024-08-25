@@ -1,3 +1,5 @@
+//Flujo de controles
+
 function preguntarEspecialidad() {
     let especialidad = prompt('Qué especialidad te interesa? Frontend = 2 o Backend = 1');
     let intentos = 0;

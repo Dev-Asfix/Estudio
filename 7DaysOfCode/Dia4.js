@@ -1,3 +1,5 @@
+//Juego Numero secreto
+
 let intentos = 0;
 let intentosJugar = 0;
 let numeroMaquina = Math.floor(Math.random()*((10-0)+1)+0);

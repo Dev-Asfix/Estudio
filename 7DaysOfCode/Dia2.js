@@ -1,3 +1,5 @@
+//Principiante variables
+
 let lenguaje = prompt('¿Qué lenguaje de programación estas aprendiendo?');
 let gusto = prompt('¿Te gusta estudiar '+lenguaje+"? Responde con el número 1 para SI o 2 para NO");
 let numero = 0;
