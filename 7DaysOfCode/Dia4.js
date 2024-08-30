@@ -16,7 +16,7 @@ function elegir(){
 
             intentos ++;
             if(intentos<3){
-                alert(`Número no válido. Te quedan ${3 - intentos} intentos.`);
+                alert(`Número no válido. Te quedan ${3 - intentos} ${intentos ==1 ?'vez':'veces'}.`);
                 elegir();
             } else {
                 alert('Has alcanzado el numero maximo de intentos. Fin del juego')
