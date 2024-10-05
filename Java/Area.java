@@ -1,14 +1,19 @@
 public class Area {
 
+    //Sobrecarga de metodos
+
+    //Circulo
     public double calcularArea(double radio){
         return Math.PI * (radio * radio);
     }
 
+    //Rectangulo
     public double calcularArea(double largo, double ancho){
 
         return largo * ancho;
     }
 
+    //Triangulo
     public double calcularArea(double base ,double altura,boolean esTriangulo){
         return (base*altura)/2;
     }
