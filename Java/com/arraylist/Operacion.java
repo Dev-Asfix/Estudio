@@ -30,8 +30,8 @@ public class Operacion {
 
     public void elegir(){
         System.out.print("Elige una opcion: ");
-        opcion = in.nextInt();
-        in.nextLine();
+        opcion = Integer.parseInt(in.nextLine());
+
     }
 
     public void bucle(){
