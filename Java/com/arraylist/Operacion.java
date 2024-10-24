@@ -1,7 +1,5 @@
 package com.arraylist;
 
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -9,32 +7,41 @@ import java.util.Scanner;
 
 public class Operacion {
 
+    private Scanner in;
+    private ArrayList<Compra> lista;
     public double saldo;
     public int opcion = 0;
-    Scanner in = new Scanner(System.in);
-    ArrayList<Compra> lista = new ArrayList<>();
 
+    //Contructor
+    public Operacion(){
+        this.in = new Scanner(System.in);
+        this.lista = new ArrayList<>();
+    }
 
+    //Añadir Compra
     public void añadir(){
 
         if(saldo <= 0){
-            System.out.println("Saldo Insuficiente");
+            System.out.println("Saldo insuficiente. No puedes añadir compras.");
             return;
         }
-        System.out.print("Nombre : ");
+        System.out.print("Nombre de la compra: ");
         String compra = in.nextLine();
+
         System.out.print("Precio:");
         double precio = in.nextDouble();
         in.nextLine();
-        if(saldo<precio){
-            System.out.println("NO tienes Saldo Suficiente");
+
+        if(saldo < precio){
+            System.out.println("No tienes saldo suficiente para realizar esta compra.");
         } else {
-            lista.add(new Compra(compra,precio));
+            lista.add(new Compra(compra, precio));
             saldo -= precio;
-            System.out.println("Compra añadida con exito , Saldo Restante: S/"+saldo);
+            System.out.println(String.format("Compra añadida con éxito. Saldo restante: S/ %.2f",saldo));
         }
     }
 
+    //Mostrar lista de Compras
     public void mostrar(){
         System.out.println("Lista Ordenada");
         Collections.sort(lista, Compra::compareByPrecio);
@@ -64,9 +71,7 @@ public class Operacion {
 
 
     public void bucle(){
-
-
-
+        
         elegirSaldo();
         while(opcion != 3){
             elegir();
@@ -87,12 +92,8 @@ public class Operacion {
                         break;
                     default:
                         System.out.println("Ingresa un numero correcto");
-                        break;
+                        
                 }
-
-
-
         }
     }
-
 }
