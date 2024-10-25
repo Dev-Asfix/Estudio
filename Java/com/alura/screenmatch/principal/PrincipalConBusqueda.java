@@ -2,6 +2,7 @@ package com.alura.screenmatch.principal;
 
 import com.alura.screenmatch.modelos.Titulo;
 //import com.google.gson.Gson;
+import com.alura.screenmatch.modelos.TituloOmdb;
 
 import java.io.IOException;
 import java.net.URI;
@@ -32,8 +33,9 @@ public class PrincipalConBusqueda {
 
 
 
-       // Gson gson = new Gson();
+        //Gson gson = new Gson();
         //Titulo mitutulo = gson.fromJson(json,Titulo.class);
-        //System.out.println("Titulo : "+mitutulo.getNombre());
+        //TituloOmdb mitutulo = gson.fromJson(json, TituloOmdb.class);
+        //System.out.println(mitutulo);
     }
 }
