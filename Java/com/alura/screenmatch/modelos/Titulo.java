@@ -5,14 +5,20 @@ package com.alura.screenmatch.modelos;
 public class Titulo implements Comparable<Titulo> {
 
 
-    //@SerializedName("Title")
+  //  @SerializedName("Title")
     private String nombre;
-    //@SerializedName("Year")
+  //  @SerializedName("Year")
     private int fechaDeLanzamiento;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
     private int totalDeEvaluaciones;
     private int duracionEnMinutos;
+
+    public Titulo(TituloOmdb mitutuloOmdb) {
+    //    this.nombre = mitutuloOmdb.title();
+      //  this.fechaDeLanzamiento = Integer.valueOf(mitutuloOmdb.year());
+        //this.duracionEnMinutos =Integer.valueOf(mitutuloOmdb.runtime().substring(0,2));
+    }
 
     public String getNombre() {
         return nombre;
@@ -79,6 +85,7 @@ public class Titulo implements Comparable<Titulo> {
     public String toString() {
         return
                 "nombre='" + nombre + '\'' +
-                ", fechaDeLanzamiento=" + fechaDeLanzamiento ;
+                ", fechaDeLanzamiento=" + fechaDeLanzamiento +
+                ", duracion= " +duracionEnMinutos;
     }
 }
