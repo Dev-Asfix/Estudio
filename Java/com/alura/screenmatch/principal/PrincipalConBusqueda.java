@@ -33,9 +33,10 @@ public class PrincipalConBusqueda {
 
 
 
-        //Gson gson = new Gson();
-        //Titulo mitutulo = gson.fromJson(json,Titulo.class);
-        //TituloOmdb mitutulo = gson.fromJson(json, TituloOmdb.class);
+        //Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).create();
+        //TituloOmdb mitutuloOmdb = gson.fromJson(json, TituloOmdb.class);
+        //System.out.println(mitutuloOmdb);
+        //Titulo mitutulo = new Titulo(mitutuloOmdb);
         //System.out.println(mitutulo);
     }
 }
