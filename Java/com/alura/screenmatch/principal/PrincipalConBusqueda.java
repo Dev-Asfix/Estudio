@@ -11,7 +11,7 @@ public class PrincipalConBusqueda {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner lectura = new Scanner(System.in);
         System.out.println("Escriba un nombre de la pelicula: ");
-        var busqueda = lectura.nextLine();
+        var busqueda = lectura.nextLine(); 
 
         String direccion = "https://www.omdbapi.com/?t="+busqueda+"&apikey=ef162820";
 
