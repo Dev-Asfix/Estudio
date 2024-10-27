@@ -25,6 +25,7 @@ public class PrincipalConBusqueda {
                 .uri(URI.create(direccion))
                 .build();
 
+                //clasea HttpREsponse
         HttpResponse<String> response = client
                  .send(request, HttpResponse.BodyHandlers.ofString());
 
