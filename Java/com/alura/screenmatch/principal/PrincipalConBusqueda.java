@@ -17,6 +17,7 @@ public class PrincipalConBusqueda {
         System.out.println("Escriba un nombre de la pelicula: ");
         var busqueda = lectura.nextLine();
 
+        //Direccion Api
         String direccion = "https://www.omdbapi.com/?t="+busqueda+"&apikey=ef162820";
 
 
