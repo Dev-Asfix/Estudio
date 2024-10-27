@@ -22,6 +22,7 @@ public class PrincipalConBusqueda {
 
         //Http client
         HttpClient client = HttpClient.newHttpClient();
+        //Reques
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(direccion))
                 .build();
