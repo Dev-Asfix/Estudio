@@ -43,5 +43,6 @@ public class PrincipalConBusqueda {
             System.out.println("Ocurrio un error : ");
             System.out.println(e.getMessage());
         }
+        //Try catch
     }
 }
