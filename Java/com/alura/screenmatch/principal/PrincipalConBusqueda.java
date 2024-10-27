@@ -29,7 +29,7 @@ public class PrincipalConBusqueda {
                  .send(request, HttpResponse.BodyHandlers.ofString());
 
         String json = response.body();
-        System.out.println(json);
+        System.out.println(json); //se conecta el json
 
 
 
