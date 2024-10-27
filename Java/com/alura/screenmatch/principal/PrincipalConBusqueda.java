@@ -20,6 +20,7 @@ public class PrincipalConBusqueda {
         String direccion = "https://www.omdbapi.com/?t="+busqueda+"&apikey=ef162820";
 
 
+        //Http client
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(direccion))
