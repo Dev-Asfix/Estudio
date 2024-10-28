@@ -2,7 +2,7 @@ import java.net.URI;
 import java.net.http.HttpClient;//Protocolo HTTP
 import java.net.http.HttpRequest; //Protocolo REquest
 import java.net.http.HttpResponse;//REsponse
-import java.util.Scanner;
+import java.util.Scanner; //Util el Scanner
 
 public class FullExample {
     public static void main(String[] args) throws Exception {
