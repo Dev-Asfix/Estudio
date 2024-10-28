@@ -1,7 +1,7 @@
 import java.net.URI;
 import java.net.http.HttpClient;//Protocolo HTTP
 import java.net.http.HttpRequest; //Protocolo REquest
-import java.net.http.HttpResponse;
+import java.net.http.HttpResponse;//REsponse
 import java.util.Scanner;
 
 public class FullExample {
