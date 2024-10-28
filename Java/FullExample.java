@@ -5,7 +5,7 @@ import java.net.http.HttpResponse;//REsponse
 import java.util.Scanner; //Util el Scanner
 
 public class FullExample { //clase donde se ejecutara el codigo
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception { //con exepciones
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
