@@ -4,7 +4,7 @@ import java.net.http.HttpRequest; //Protocolo REquest
 import java.net.http.HttpResponse;//REsponse
 import java.util.Scanner; //Util el Scanner
 
-public class FullExample {
+public class FullExample { //clase donde se ejecutara el codigo
     public static void main(String[] args) throws Exception {
         HttpClient client = HttpClient.newHttpClient();
 
