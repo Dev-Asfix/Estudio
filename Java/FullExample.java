@@ -29,6 +29,6 @@ public class FullExample {
                 System.out.println(token);
             }
         }
-        scanner.close();
+        scanner.close();// Es buena practica hacer eso 
     }
 }
