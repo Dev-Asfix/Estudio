@@ -9,7 +9,7 @@ public class FullExample {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
-            .uri(new URI("https://api.example.com/user/1"))
+            .uri(new URI("https://api.example.com/user/1")) // Aqui va la api
             .GET()
             .build();
 
