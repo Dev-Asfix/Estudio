@@ -1,6 +1,7 @@
 package com.dev.conversor;
 import java.util.Scanner;
 
+//Se crea la clase Operacion
 public class Operacion {
     private Scanner in = new Scanner(System.in);
     private String cantidadString;
