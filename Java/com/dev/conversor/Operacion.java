@@ -30,7 +30,7 @@ public class Operacion {
                     Elige una opción:
                     """);
 
-            String input = in.nextLine();
+            String input = in.nextLine(); // Con scanner se inicia un input
 
             if (input.equalsIgnoreCase("salir")) {
                 System.out.println("Saliendo del programa...");
