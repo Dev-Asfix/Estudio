@@ -6,6 +6,7 @@ public class Operacion {
     private String cantidadString;
     public double cantidad;
 
+    //Aqui se sube el menu
     public void menu() {
 
             System.out.println("""
