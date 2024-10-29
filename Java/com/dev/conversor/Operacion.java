@@ -32,6 +32,8 @@ public class Operacion {
 
             String input = in.nextLine(); // Con scanner se inicia un input
 
+            //ignora pese a ser minuscula o mayuscula
+        
             if (input.equalsIgnoreCase("salir")) {
                 System.out.println("Saliendo del programa...");
 
