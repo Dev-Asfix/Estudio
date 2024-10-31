@@ -22,6 +22,7 @@ public class CurrencyMenu {
     }
 
     public String getCurrencyCode(int option) {
+        //return del switch
         return switch (option) {
             case 1 -> "USD";
             case 2 -> "BRL";
