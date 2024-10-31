@@ -9,6 +9,7 @@ package com.dev.conversion;
 import com.google.gson.annotations.SerializedName;
 
 public record Datos(
+        //Serializamos
         @SerializedName("result") String resultado,
         @SerializedName("documentation") String documentacion,
         @SerializedName("terms_of_use") String terminosDeUso,
