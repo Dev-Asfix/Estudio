@@ -1,5 +1,5 @@
-package com.aluracursos.service;
+package com.aluracursos.screenmatch.service;
 
-public class IConvertirDatos {
-    
+public interface IConvertirDatos {
+    <T> T obtenerDatos(String json, Class<T> clase);
 }
