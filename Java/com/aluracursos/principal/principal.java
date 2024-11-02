@@ -106,8 +106,9 @@ public class Principal {
                                 .filter(e -> e.getEvaluacion() != 0.0)
                                 .collect(Collectors.summarizingDouble(Episodio::getEvaluacion));
                 System.out.println(est);
-                System.out.println("El numero de la suma es : " + est.getAverage());
-                System.out.println("El numero maximo es : " + est.getMax());
-                System.out.println("EL numero minimo es : " + est.getMin());
+                System.out.println("Media " + est.getAverage());
+                System.out.println("Mejor episódio: " + est.getMax());
+                System.out.println("Peor episódio: " + est.getMin());
+                System.out.println("Cantidad " + est.getCount());
         }
 }
