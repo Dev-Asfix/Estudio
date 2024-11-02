@@ -62,7 +62,12 @@ public class Principal {
                         .map( d-> new Episodio(t.temporada(), d)))
                 .collect(Collectors.toList());
 
-        episodios.forEach(System.out::println);        
+        episodios.forEach(System.out::println);       
+        
+        //Orden por año
+        System.out.println("Dime el año en el que quieres que apararescan : ");
+        var fecha = in.nextInt();
+        in.nextLine();
 
     }
 }
