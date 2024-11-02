@@ -55,6 +55,14 @@ public class Principal {
                 .filter(t -> !t.evaluacion().equalsIgnoreCase("N/A"))
                 .limit(5)
                 .forEach(System.out::println);
-        ;
+        
+                //Convirtiendo los datos en una lista del tipo episodio
+                List<Episodio> episodios = temporadas.stream()
+                .flatMap(t -> t.episodios().stream()
+                        .map( d-> new Episodio(t.temporada(), d)))
+                .collect(Collectors.toList());
+
+        episodios.forEach(System.out::println);        
+
     }
 }
