@@ -79,5 +79,20 @@ public class Principal {
                                 "Fecha de Lanzamiento : " + e.getFechaDeLanzamiento().format(dtf)
                 ));
 
+                        //Busca episodio por pedazo de titulo
+
+        System.out.println("Por favor escriba el titulo del espisodio que desea ver");
+        var pedazoDeTitulo = in.nextLine();
+
+        Optional<Episodio> episodioBuscado = episodios.stream()
+                .filter(e -> e.getTitulo().toUpperCase().contains(pedazoDeTitulo.toUpperCase()))
+                .findFirst();
+        if(episodioBuscado.isPresent()){
+            System.out.println("Episodio Encontrado");
+            System.out.println("Los datos son: " + episodioBuscado.get());
+        } else {
+            System.out.println("Episodio no encontrado");
+        }
+
     }
 }
