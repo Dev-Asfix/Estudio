@@ -69,5 +69,15 @@ public class Principal {
         var fecha = in.nextInt();
         in.nextLine();
 
+        LocalDate fechaBusqueda = LocalDate.of(fecha, 1,1);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        episodios.stream()
+                .filter(e -> e.getFechaDeLanzamiento()!= null && e.getFechaDeLanzamiento().isAfter(fechaBusqueda))
+                .forEach(e -> System.out.println(
+                        "Temporada: " + e.getTemporada() +
+                                "Titulo: " +e.getTitulo()+
+                                "Fecha de Lanzamiento : " + e.getFechaDeLanzamiento().format(dtf)
+                ));
+
     }
 }
