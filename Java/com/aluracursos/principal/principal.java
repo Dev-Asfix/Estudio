@@ -94,5 +94,11 @@ public class Principal {
             System.out.println("Episodio no encontrado");
         }
 
+        Map<Integer, Double> evaluacionesPorTemporada = episodios.stream()
+        .collect(Collectors.groupingBy(Episodio::getTemporada,
+                Collectors.averagingDouble(Episodio::getEvaluacion)));
+
+System.out.println(evaluacionesPorTemporada);
+
     }
 }
