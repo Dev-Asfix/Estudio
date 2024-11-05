@@ -32,6 +32,11 @@ public class Principal {
        json = consumoAPI.obtenerDatos(URL_BASE_BUSQUEDA + nombre.replace(" ", "%20"));
        var datosBusqueda = convertirDatos.obtenerDatos(json , DatosBusqueda.class);
 
+       
+       libros = datosBusqueda.resultados();
+       System.out.println("Resultados encontrados : " +datosBusqueda.contador());
+       libros.forEach(System.out::println);
+
 
     }
 
