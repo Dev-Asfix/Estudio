@@ -26,6 +26,13 @@ public class Principal {
                .limit(5)
                .forEach(libro -> System.out.println(libro.titulo()));
 
+               System.out.println("Escribe el nombre que quieres buscar : ");
+       var nombre = in.nextLine();
+
+       json = consumoAPI.obtenerDatos(URL_BASE_BUSQUEDA + nombre.replace(" ", "%20"));
+       var datosBusqueda = convertirDatos.obtenerDatos(json , DatosBusqueda.class);
+
+
     }
 
 }
