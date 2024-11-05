@@ -5,7 +5,9 @@ import com.alura.proyecto.model.Libro;
 import com.alura.proyecto.service.ConsumoAPI;
 import com.alura.proyecto.service.ConvertirDatos;
 
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Principal {
 
@@ -36,6 +38,8 @@ public class Principal {
        libros = datosBusqueda.resultados();
        System.out.println("Resultados encontrados : " +datosBusqueda.contador());
        libros.forEach(System.out::println);
+       DoubleSummaryStatistics est = libros.stream()
+               .collect(Collectors.summarizingDouble(Libro::descargas));
 
 
     }
