@@ -6,6 +6,7 @@ import com.alura.proyecto.service.ConsumoAPI;
 import com.alura.proyecto.service.ConvertirDatos;
 
 import java.sql.SQLOutput;
+import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Scanner;
@@ -23,38 +24,22 @@ public class Principal {
 
        var json = consumoAPI.obtenerDatos(URL_BASE);
        var datos = convertirDatos.obtenerDatos(json, DatosBusqueda.class);
-       System.out.println("Libros : ");
+       System.out.println(datos);
 
-
-       List<Libro> libros = datos.resultados();
-
-       libros.stream()
+       //Top 10 Libros mas descargados
+       System.out.println("Top 10 libros mas descargados/");
+       datos.resultados().stream()
+               .sorted(Comparator.comparing(Libro::descargas).reversed())
                .limit(5)
-               .forEach(libro -> System.out.println(libro.titulo()));
+               .map(l -> l.titulo().toUpperCase())
+               //.map(Libro::titulo) -- Solo imprime titulos
+               .forEach(System.out::println)
+       ;
 
 
-       System.out.println("Escribe el nombre que quieres buscar : ");
-       var nombre = in.nextLine();
-
-       json = consumoAPI.obtenerDatos(URL_BASE_BUSQUEDA + nombre.replace(" ", "%20"));
-       var datosBusqueda = convertirDatos.obtenerDatos(json , DatosBusqueda.class);
-
-
-       libros = datosBusqueda.resultados();
-       System.out.println("Resultados encontrados : " +datosBusqueda.contador());
-       libros.forEach(System.out::println);
-
-       DoubleSummaryStatistics est = libros.stream()
-               .collect(Collectors.summarizingDouble(Libro::descargas));
-       System.out.println(est);
-       System.out.println("Estadísticas de descargas : ");
-       System.out.println("Promedio de descargas : "+ est.getAverage());
-       System.out.println("Total de descagas : " + est.getSum());
-       System.out.println("Minimo de descargas : " + est.getMin());
-       System.out.println("Mázimo de descargas : "+ est.getMax());
-       System.out.println("Cantidad de libros : " + est.getCount());
 
 
    }
 
 }
+
