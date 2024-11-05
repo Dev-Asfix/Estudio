@@ -11,20 +11,9 @@ public class Principal {
 
     ConsumoAPI consumoAPI = new ConsumoAPI();
     ConvertirDatos convertirDatos = new ConvertirDatos();
+    Scanner in = new Scanner(System.in);
     private final String URL_BASE = "https://gutendex.com/books/";
-
-   public void mostrarMenu(){
-
-       var json = consumoAPI.obtenerDatos(URL_BASE);
-       var datos = convertirDatos.obtenerDatos(json, DatosBusqueda.class);
-       System.out.println("Libros : ");
-
-       List<Libro> libros = datos.resultados();
-       libros.stream()
-               .limit(10)
-               .forEach(System.out::println);
-
-       libros.forEach(System.out::println);
+    private final String URL_BASE_BUSQUEDA = "https://gutendex.com/books/?search=";
    }
 
 }
