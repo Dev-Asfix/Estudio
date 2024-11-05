@@ -16,8 +16,10 @@ public class Principal {
     private final String URL_BASE_BUSQUEDA = "https://gutendex.com/books/?search=";
    
     public void mostrarMenu(){
+        var json = consumoAPI.obtenerDatos(URL_BASE);
+        var datos = convertirDatos.obtenerDatos(json, DatosBusqueda.class);
+        System.out.println("Libros : ");
 
-        
     }
 
 }
