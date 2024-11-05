@@ -40,6 +40,14 @@ public class Principal {
        libros.forEach(System.out::println);
        DoubleSummaryStatistics est = libros.stream()
                .collect(Collectors.summarizingDouble(Libro::descargas));
+               
+       System.out.println(est);
+       System.out.println("Estadísticas de descargas : ");
+       System.out.println("Promedio de descargas : "+ est.getAverage());
+       System.out.println("Total de descagas : " + est.getSum());
+       System.out.println("Minimo de descargas : " + est.getMin());
+       System.out.println("Mázimo de descargas : "+ est.getMax());
+       System.out.println("Cantidad de libros : " + est.getCount());
 
 
     }
