@@ -14,6 +14,10 @@ public class Principal {
     Scanner in = new Scanner(System.in);
     private final String URL_BASE = "https://gutendex.com/books/";
     private final String URL_BASE_BUSQUEDA = "https://gutendex.com/books/?search=";
-   }
+   
+    public void mostrarMenu(){
+
+        
+    }
 
 }
