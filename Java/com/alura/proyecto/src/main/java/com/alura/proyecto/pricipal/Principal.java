@@ -20,6 +20,12 @@ public class Principal {
         var datos = convertirDatos.obtenerDatos(json, DatosBusqueda.class);
         System.out.println("Libros : ");
 
+        List<Libro> libros = datos.resultados();
+
+       libros.stream()
+               .limit(5)
+               .forEach(libro -> System.out.println(libro.titulo()));
+
     }
 
 }
