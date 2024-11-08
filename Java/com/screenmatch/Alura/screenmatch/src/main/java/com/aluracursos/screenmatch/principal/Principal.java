@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 public class Principal {
 
+        //Variables
     private Scanner in = new Scanner(System.in);
     private ConsumoAPI consumoAPI = new ConsumoAPI();
     private final String API_KEY = "&apikey=ef162820";
