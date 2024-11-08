@@ -31,6 +31,7 @@ public class Principal {
 
         List<DatosTemporada> temporadas = new ArrayList<>();
 
+        //Bucle
         for (int i = 1; i <= datos.totalDeTemporadas() ; i++) {
             json = consumoAPI.obtenerDatos(API_BASE+nombre.replace(" ","+")+"&Season="+i+API_KEY);
             var datosTemporada = convierteDatos.obtenerDatos(json , DatosTemporada.class);
