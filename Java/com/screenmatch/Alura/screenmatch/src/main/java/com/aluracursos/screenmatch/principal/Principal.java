@@ -20,6 +20,7 @@ public class Principal {
     private final String API_BASE = "https://www.omdbapi.com/?t=";
     private ConvierteDatos convierteDatos = new ConvierteDatos();
 
+    //Mostrar menu
     public void muestraMenu(){
         System.out.println("Escribe el nombre de la Serie: ");
         var nombre = in.nextLine();
