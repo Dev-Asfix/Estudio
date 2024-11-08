@@ -103,6 +103,7 @@ public class Principal {
 //        }
 
 
+//Mapeando
         Map<Integer , Double> evaluacionesPorTemporada = episodios.stream()
                 .filter(e-> e.getEvaluacion() != 0.0)
                 .collect(Collectors.groupingBy(Episodio::getTemporada,
