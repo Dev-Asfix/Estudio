@@ -1,0 +1,28 @@
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\bin\Debug\Calcular.exe.config
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\bin\Debug\Calcular.exe
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\bin\Debug\Calcular.pdb
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\bin\Debug\Calcular.xml
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\obj\Debug\Calcular.Form1.resources
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\obj\Debug\Calcular.Resources.resources
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\obj\Debug\Calcular.vbproj.GenerateResource.Cache
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\obj\Debug\Calcular.exe
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\obj\Debug\Calcular.xml
+C:\Users\Pablo_\AppData\Local\Temporary Projects\Calcular\obj\Debug\Calcular.pdb
+d:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\bin\Debug\Calcular.exe.config
+d:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.exe
+d:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.xml
+d:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.pdb
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\bin\Debug\Calcular.exe
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\bin\Debug\Calcular.pdb
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\bin\Debug\Calcular.xml
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\bin\Debug\aa\Calcular.resources.dll
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\bin\Debug\es-PE\Calcular.resources.dll
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.Form1.resources
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.Resources.resources
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.Form1.aa.resources
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.Form1.es-PE.resources
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.vbproj.GenerateResource.Cache
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\aa\Calcular.resources.dll
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\es-PE\Calcular.resources.dll
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.vbproj.AssemblyReference.cache
+D:\Files\Documents\Visual Studio 2012\Projects\Calcular\Calcular\obj\Debug\Calcular.vbproj.CoreCompileInputs.cache
