@@ -162,6 +162,8 @@ public class Principal {
         seriePorCategoria.forEach(System.out::println);
     }
 
+    //Buscar por temporadas
+
     private void buscarSeriesPorTemporada(){
         System.out.println("Filtrar series por cuántas temporadas? : ");
         var totalTemporadas = teclado.nextInt();
