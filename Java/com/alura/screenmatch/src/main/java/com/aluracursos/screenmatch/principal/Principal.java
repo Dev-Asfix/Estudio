@@ -187,6 +187,7 @@ public class Principal {
                         e.getSerie(), e.getTitulo(),e.getTemporada(), e.getEvaluacion()));
     }
 
+    //Top 5 series buscadas
     private void buscarTop5Episodios(){
         buscarSeriePorTitulo();
         if(serieBuscada.isPresent()){
