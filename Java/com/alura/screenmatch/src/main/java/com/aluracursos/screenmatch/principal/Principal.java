@@ -176,6 +176,7 @@ public class Principal {
         filtroSeries.forEach(s-> System.out.println(s.getTitulo() + " - evaluacion " + s.getEvaluacion()));
 
     }
+    //Filtro por episodio el titulo
 
     private void buscarEpisodioPorTitulo(){
         System.out.println("Escribe el nombre del titulo : ");
