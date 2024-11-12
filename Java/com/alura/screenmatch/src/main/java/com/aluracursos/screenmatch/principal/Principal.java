@@ -153,6 +153,7 @@ public class Principal {
         nombreSeries.forEach(e-> System.out.println("Serie : " +e.getTitulo() +" Evaluacion : " + e.getEvaluacion()));
     }
 
+    //Actualizar
     private void buscarSeriePorCategoria(){
         System.out.println("Que categoria quieres Buscar : ");
         var nombreCategoria = teclado.nextLine();
