@@ -153,7 +153,6 @@ public class Principal {
         nombreSeries.forEach(e-> System.out.println("Serie : " +e.getTitulo() +" Evaluacion : " + e.getEvaluacion()));
     }
 
-    //Actualizar
     private void buscarSeriePorCategoria(){
         System.out.println("Que categoria quieres Buscar : ");
         var nombreCategoria = teclado.nextLine();
@@ -162,8 +161,6 @@ public class Principal {
         System.out.println("Series por categoria "+ nombreCategoria);
         seriePorCategoria.forEach(System.out::println);
     }
-
-    //Buscar por temporadas
 
     private void buscarSeriesPorTemporada(){
         System.out.println("Filtrar series por cuántas temporadas? : ");
@@ -179,7 +176,6 @@ public class Principal {
         filtroSeries.forEach(s-> System.out.println(s.getTitulo() + " - evaluacion " + s.getEvaluacion()));
 
     }
-    //Filtro por episodio el titulo
 
     private void buscarEpisodioPorTitulo(){
         System.out.println("Escribe el nombre del titulo : ");
@@ -191,7 +187,6 @@ public class Principal {
                         e.getSerie(), e.getTitulo(),e.getTemporada(), e.getEvaluacion()));
     }
 
-    //Top 5 series buscadas
     private void buscarTop5Episodios(){
         buscarSeriePorTitulo();
         if(serieBuscada.isPresent()){
