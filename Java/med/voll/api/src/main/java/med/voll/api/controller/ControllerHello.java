@@ -24,7 +24,7 @@ public class ControllerHello {
         hol.add("hola");
         hol.add("Gato");
         hol.add(23);
-        hol.add();
+        hol.add(true);
         return hol;
     }
 
