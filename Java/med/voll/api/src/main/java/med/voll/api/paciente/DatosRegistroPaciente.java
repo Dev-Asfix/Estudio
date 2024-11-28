@@ -9,6 +9,7 @@ public record DatosRegistroPaciente(
         String telefono,
         String documentoIdentidad,
         DatosDireccion direccion
+
 ) {
 
 }
