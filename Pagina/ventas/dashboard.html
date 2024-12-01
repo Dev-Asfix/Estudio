@@ -3,22 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Sistema de Ventas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sistema de Ventas - Página Principal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="dashboard-container">
-        <header>
-            <h1>Panel de Gestión</h1>
-            <button id="logout">Cerrar Sesión</button>
-        </header>
-        <nav>
-            <button id="register-product">Registrar Producto</button>
-            <button id="view-inventory">Ver Inventario</button>
-            <button id="make-sale">Realizar Venta</button>
-        </nav>
-        <main id="main-content"></main>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Menú Principal</h2>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#registrar-producto">Registrar Producto</a></li>
+                <li><a href="#inventario">Inventario</a></li>
+                <li><a href="#realizar-venta">Realizar Venta</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Dashboard -->
+            <section id="dashboard" class="section">
+                <header>
+                    <h1>Dashboard</h1>
+                    <button id="logout">Cerrar Sesión</button>
+                </header>
+                <canvas id="salesChart"></canvas>
+            </section>
+
+            <!-- Registrar Producto -->
+            <section id="registrar-producto" class="section">
+                <h2>Registrar Producto</h2>
+                <form id="registerProductForm">
+                    <label for="productName">Nombre:</label>
+                    <input type="text" id="productName" required>
+                    <label for="productPrice">Precio:</label>
+                    <input type="number" id="productPrice" required>
+                    <label for="productStock">Stock:</label>
+                    <input type="number" id="productStock" required>
+                    <button type="submit">Guardar Producto</button>
+                </form>
+            </section>
+
+            <!-- Inventario -->
+            <section id="inventario" class="section">
+                <h2>Inventario</h2>
+                <ul id="inventoryList">
+                    <li>hola - Precio: $50 - Stock: 32</li>
+                    <li>hola - Precio: $50 - Stock: 25</li>
+                </ul>
+            </section>
+
+            <!-- Realizar Venta -->
+            <section id="realizar-venta" class="section">
+                <h2>Realizar Venta</h2>
+                <form id="sellProductForm">
+                    <label for="productSelect">Producto:</label>
+                    <select id="productSelect">
+                        <option value="hola" data-stock="32">hola (Stock: 32)</option>
+                    </select>
+                    <label for="sellQuantity">Cantidad:</label>
+                    <input type="number" id="sellQuantity" required>
+                    <button type="submit">Vender</button>
+                </form>
+            </section>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
