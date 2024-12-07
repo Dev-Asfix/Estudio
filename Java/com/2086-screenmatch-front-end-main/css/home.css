@@ -73,6 +73,74 @@ main {
     width: 300px;
     height: 444px;
 }
+.lista {
+    list-style-type: none;
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 0;
+    perspective: 1000px; /* Añade profundidad 3D */
+}
+
+.lista li {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Esquinas redondeadas */
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px); /* Efecto cristal */
+    transform-style: preserve-3d;
+}
+
+.lista  {
+    transform: scale(1) rotateY(10deg); /* Efecto 3D en hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 
+                0 0 20px rgba(0, 255, 255, 0.6); /* Toque de neón */
+}
+
+.lista li::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
+    mix-blend-mode: screen;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lista li:hover::before {
+    opacity: 1; /* Efecto de neón visible en hover */
+}
+
+.lista li img {
+   
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    transform: translateZ(10px); /* Desplazamiento 3D */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.lista li img:hover {
+    transform: translateZ(50px) scale(1.1); /* Más profundidad en hover */
+    filter: brightness(1.2) drop-shadow(0 6px 12px rgba(0, 255, 255, 0.4));
+}
+
+.pesquisa {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a1a1a, #000); /* Fondo oscuro */
+    color: white;
+}
+
+@media screen and (max-width: 1600px) {
+    .lista {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+}
+
 
 .pesquisa {
 
