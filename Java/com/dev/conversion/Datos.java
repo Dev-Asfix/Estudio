@@ -21,4 +21,24 @@ public record Datos(
         @SerializedName("target_code") String codigoObjetivo,
         @SerializedName("conversion_rate") double tasaDeConversion,
         @SerializedName("conversion_result") double resultadoConversion
+        
+/*2935 8004 
+4217 6699
+5390 2388
+5657 0976
+5826 4256
+--> Ok*/
+
+/*
+2702 7453
+8198 3638
+7371 6100
+7594 7081
+9917 5540
+0065 9952
+4354 6106
+0966 2140
+9977 1208
+3468 0242
+il*/
 ) {}
