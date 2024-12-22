@@ -23,4 +23,5 @@ public record DatosRigistroMedico(
                 @Valid
         DatosDireccion direccion
         ) {
+
 }
