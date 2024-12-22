@@ -22,7 +22,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             from consultas c 
             where c.fecha = :fecha
         and
-            c.motivoCancelamiento is null
+            c.motivo_cancelamiento is null
         )
         order by rand()
         limit 1
