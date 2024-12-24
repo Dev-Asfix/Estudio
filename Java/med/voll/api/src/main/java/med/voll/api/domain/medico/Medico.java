@@ -93,4 +93,8 @@ public class Medico {
     public void desactivarMedico() {
         this.activo = false;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
