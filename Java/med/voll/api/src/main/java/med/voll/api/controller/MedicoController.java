@@ -37,7 +37,7 @@ public class MedicoController {
                 medico.getEmail(),
                 medico.getTelefono(),
                 medico.getDocumento(),
-
+                medico.getEspecialidad(),
                 new DatosDireccion(
                         medico.getDireccion().getCalle(),
                         medico.getDireccion().getDistrito(),
@@ -45,6 +45,7 @@ public class MedicoController {
                         medico.getDireccion().getNumero(),
                         medico.getDireccion().getComplemento()
                 )
+
         );
         URI url = uriComponentsBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
         return ResponseEntity.created(url).body(datosRespuestaMedico);
@@ -68,7 +69,7 @@ public class MedicoController {
                 medico.getEmail(),
                 medico.getTelefono(),
                 medico.getDocumento(),
-
+                medico.getEspecialidad(),
                 new DatosDireccion(
                         medico.getDireccion().getCalle(),
                         medico.getDireccion().getDistrito(),
@@ -76,6 +77,7 @@ public class MedicoController {
                         medico.getDireccion().getNumero(),
                         medico.getDireccion().getComplemento()
                 )
+
         ));
     }
 
@@ -105,7 +107,7 @@ public class MedicoController {
                 medico.getEmail(),
                 medico.getTelefono(),
                 medico.getDocumento(),
-
+                medico.getEspecialidad(),
                 new DatosDireccion(
                         medico.getDireccion().getCalle(),
                         medico.getDireccion().getDistrito(),
