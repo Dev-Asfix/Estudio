@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Forum UI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        background-color: #0d1117;
+        color: #c9d1d9;
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        color: #58a6ff;
+      }
+      .form {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      input,
+      textarea {
+        background: #161b22;
+        color: #c9d1d9;
+      }
+      button {
+        background: #238636;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #2ea043;
+      }
+      .topic-list {
+        margin-top: 30px;
+      }
+      .topic {
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.07);
+        margin-bottom: 15px;
+        border-left: 5px solid #58a6ff;
+        border-radius: 6px;
+      }
+      .topic h2 {
+        margin: 0 0 10px;
+      }
+      .neon {
+        text-shadow: 0 0 5px #58a6ff, 0 0 10px #58a6ff, 0 0 15px #58a6ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="neon">Modern Forum</h1>
+      <form id="topicForm" class="form">
+        <h2>Create New Topic</h2>
+        <input type="text" id="title" placeholder="Topic Title" required />
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Topic Message"
+          required
+        ></textarea>
+        <input type="number" id="author" placeholder="Author ID" required />
+        <input type="number" id="course" placeholder="Course ID" required />
+        <button type="submit">Create Topic</button>
+      </form>
+
+      <div id="topics" class="topic-list">
+        <h2>Topics</h2>
+        <!-- Topics will be dynamically loaded here -->
+      </div>
+    </div>
+
+    <script>
+      const baseUrl = "http://localhost:8080";
+      const token = "Bearer YOUR_TOKEN_HERE"; // Replace with your actual token
+
+      async function fetchTopics() {
+        try {
+          const response = await fetch(`${baseUrl}/topicos`, {
+            method: "GET",
+            headers: {
+              Authorization: token,
+              "Content-Type": "application/json",
+            },
+          });
+          const data = await response.json();
+          const topicsContainer = document.getElementById("topics");
+          topicsContainer.innerHTML = "";
+
+          data.content.forEach((topic) => {
+            const topicElement = document.createElement("div");
+            topicElement.className = "topic";
+            topicElement.innerHTML = `
+                        <h2>${topic.titulo}</h2>
+                        <p>${topic.mensaje}</p>
+                        <p>Status: ${topic.status}</p>
+                        <p>Author: ${topic.autor.nombre} (${topic.autor.correoElectronico})</p>
+                        <p>Course: ${topic.curso.nombre} - ${topic.curso.categoria}</p>
+                    `;
+            topicsContainer.appendChild(topicElement);
+          });
+        } catch (error) {
+          console.error("Error fetching topics:", error);
+        }
+      }
+
+      async function createTopic(event) {
+        event.preventDefault();
+        const title = document.getElementById("title").value;
+        const message = document.getElementById("message").value;
+        const author = document.getElementById("author").value;
+        const course = document.getElementById("course").value;
+
+        try {
+          const response = await fetch(`${baseUrl}/topicos`, {
+            method: "POST",
+            headers: {
+              Authorization: token,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              titulo: title,
+              mensaje: message,
+              autor: parseInt(author),
+              curso: parseInt(course),
+            }),
+          });
+
+          if (response.ok) {
+            alert("Topic created successfully!");
+            fetchTopics();
+            document.getElementById("topicForm").reset();
+          } else {
+            const errorData = await response.json();
+            alert("Failed to create topic: " + errorData.message);
+          }
+        } catch (error) {
+          console.error("Error creating topic:", error);
+        }
+      }
+
+      document
+        .getElementById("topicForm")
+        .addEventListener("submit", createTopic);
+      fetchTopics();
+    </script>
+  </body>
+</html>
