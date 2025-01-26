@@ -13,4 +13,7 @@ public class RegistroRequest {
     String firstname;
     String lastname;
     String country;
+
+    //Getter and Setters
+
 }
