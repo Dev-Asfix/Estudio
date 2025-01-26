@@ -1,10 +1,12 @@
 package com.rosas.demojwt.Auth;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class RegistroRequest {
@@ -14,6 +16,5 @@ public class RegistroRequest {
     String lastname;
     String country;
 
-    //Getter and Setters
 
 }

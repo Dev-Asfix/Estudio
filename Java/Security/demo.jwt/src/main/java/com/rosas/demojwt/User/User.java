@@ -23,8 +23,10 @@ public class User implements UserDetails {
     @GeneratedValue
     Integer id;
 
+    @Basic
     @Column(nullable = false)
     String username;
+    @Column(nullable = false)
     String password;
     String firstname;
     String lastname;
@@ -32,22 +34,6 @@ public class User implements UserDetails {
     @Enumerated(EnumType.ORDINAL)
     Role role;
 
-
-    // Contructor privado
-    private User(UserBuilder builder){
-        this.id = builder.id;
-        this.username = builder.username;
-        this.password = builder.password;
-        this.firstname = builder.firstname;
-        this.lastname = builder.lastname;
-        this.country = builder.country;
-        this.role = builder.role;
-    }
-
-    //Metodo estatico para obtener el Builder
-    public static UserBuilder builder() {
-        return new UserBuilder();
-    }
 
 
 
@@ -76,67 +62,6 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-
-
-
-    //Metodos Getter y Setter
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
 
 
 }

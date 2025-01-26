@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
+@RequiredArgsConstructor
 
 public class Authcontroller {
 
     private final AuthService authService;
-    public Authcontroller(AuthService authService){
-        this.authService = authService;
-    }
+
 
     @PostMapping(value = "login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request){
