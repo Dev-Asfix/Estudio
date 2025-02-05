@@ -27,6 +27,7 @@ import com.auth.spring.login.security.services.UserDetailsServiceImpl;
     // securedEnabled = true,
     // jsr250Enabled = true,
     prePostEnabled = true)
+//Antigua Version de security los comentarios - Anterior antes de las 5
 public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
   @Autowired
   UserDetailsServiceImpl userDetailsService;
