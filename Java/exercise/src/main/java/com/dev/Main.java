@@ -1,57 +1,62 @@
 package com.dev;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
+    public int[] search(int[] nums , int target){
+//        for(int i = 0; i<nums.length; i++){
+//            for(int j = i+1; j<nums.length; j++){
+//                if(nums[j] == target - nums[i]){
+//                    return new int[] {i , j};
+//                }
+//            }
+//        }
+        Map<Integer, Integer> map = new HashMap<>();
+
+//        for(int i = 0; i<nums.length; i++){
+//            map.put(nums[i], i);
+//        }
+//        for(int i = 0; i<nums.length; i++){
+//            int complement = target - nums[i];
+//            if(map.containsKey(complement) && map.get(complement) != i){
+//                return new int[] {i, map.get(complement)};
+//            }
+//        }
+
+        for(int i = 0; i<nums.length; i++){
+
+            int complement = target - nums[i];
+            if(map.containsKey(complement)){
+
+                return new int[] {map.get(complement), i};
+            }
+            map.put(nums[i],i );
+
+        }
+        return new int[] {};
+    }
+
     public static void main(String args[]){
-        Stack<String> pila = new Stack<>();
 
-        System.out.println(pila);
+        Main hola = new Main();
 
-        pila.push("java");
-        pila.push("Python");
-        pila.push("C++");
-        System.out.println("Pila" + pila);
+        int numero[] = hola.search(new int[] {8,2,4,2,2}, 4);
+        System.out.println(Arrays.toString(numero));
 
-        System.out.println("Ultimo : " + pila.peek());
+        int a = 0;
+        int b = 1;
+        int c = 0;
+        for(int i = 0; c<=13; i++){
 
-        pila.pop();
-        System.out.println("Pila despues de pop " + pila);
+                i = c ;
+                System.out.print(i + ", " );
+                c = i + b;
+                b = i;
 
-        System.out.println("----------------------------------");
-        System.out.println("----------------------------------");
-        System.out.println("----------------------------------");
-        System.out.println("----------------------------------");
+                // 0  1 1 2 3 5
+                //a=0     b=3    c=8  i=5
+                //
 
-        Queue<String> cola = new LinkedList<>();
-
-        cola.offer("Cliente 1");
-        cola.offer("Cliente 2");
-        cola.offer("Cliente 3");
-        System.out.println( "Cola : " + cola);
-
-        cola.poll();
-        System.out.println("Cola despues de atender a un cliente _ " + cola);
-
-        System.out.println("----------------------------------");
-        System.out.println("----------------------------------");
-        System.out.println("----------------------------------");
-        System.out.println("----------------------------------");
-
-        HashMap<String, Integer> edades = new HashMap<>();
-
-        edades.put("Pablo", 25);
-        edades.put("Ana", 30);
-        edades.put("Carlos" , 25);
-        System.out.println("edades : " +edades);
-
-        // Obtener el valor de una clave
-        System.out.println("Edad de Ana: " + edades.get("Ana"));
-
-        edades.remove(25);
-        System.out.println("Edades : " + edades);
+        }
     }
 }
