@@ -1,0 +1,132 @@
+/* Estilos generales y futuristas */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    font-family: 'Orbitron', sans-serif;
+    color: #0ff;
+  }
+  
+  .dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .simulator {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px #0ff;
+  }
+  
+  /* Sección de entrada */
+  .input-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-section input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    background: #222;
+    color: #0ff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .input-section input[type="text"]:focus {
+    box-shadow: 0 0 10px #0ff;
+  }
+  
+  .input-section button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0ff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .input-section button:hover {
+    background: #00aaff;
+  }
+  
+  /* Visualización de variables */
+  .variables {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .variable-box {
+    background: #111;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-align: center;
+    min-width: 150px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .variable-box .label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .variable-box .value {
+    font-size: 24px;
+  }
+  
+  /* Contenedor de pasos */
+  .steps-container {
+    max-height: 300px;
+    overflow-y: auto;
+    background: #111;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Animaciones */
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0px #0ff; }
+    50% { transform: scale(1.1); box-shadow: 0 0 10px #0ff; }
+    100% { transform: scale(1); box-shadow: 0 0 0px #0ff; }
+  }
+  
+  .updated {
+    animation: pulse 0.6s ease-out;
+  }
+  
+  .step {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

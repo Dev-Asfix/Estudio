@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Palíndromos Futurista</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header class="header">
+        <h1>Simulador de Palíndromos Futurista</h1>
+      </header>
+      <section class="simulator">
+        <div class="input-section">
+          <label for="inputNumber">Ingresa un número:</label>
+          <input type="text" id="inputNumber" placeholder="Ej. 121" />
+          <button id="startSimulation">Iniciar Simulación</button>
+        </div>
+        <div class="variables">
+          <div class="variable-box" id="var-x">
+            <span class="label">x:</span>
+            <span class="value">-</span>
+          </div>
+          <div class="variable-box" id="var-hr">
+            <span class="label">halfReversed:</span>
+            <span class="value">-</span>
+          </div>
+        </div>
+        <div class="steps-container" id="steps">
+          <!-- Se mostrarán los pasos de la simulación -->
+        </div>
+      </section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
