@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.album-img {
+  width: 12em;
+  height: 12em;
+  margin-bottom: 0.8em;
+}
+
+.album-card {
+ width: 16rem;
+ margin-left: 1rem;
+ margin-top: 1rem;
+}
+
+.song_name_card {
+  min-height: 2em;
+  vertical-align: middle;
+}
+
+.song_card {
+  width: 16rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.song_artist {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+}
+
+.song_name {
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+.song {
+  background-color: black;
+}
+
+.player {
+  background-color: black;
+  margin-top: 3em;
+  width: 100%;
+}
+
+.controls {
+  background-color: black;
+  text-align: center;
+}
+
+.player_button {
+  margin-top: 0.5em;
+}
+
+.btn-circle.btn-lg {
+  width: 45px;
+  height: 45px;
+  padding: 8px 10px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.bar {
+  user-select: none;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0.5em;
+  background-color: black
+}
+.bar_time {
+  color: white;
+  font-size: 16px;
+}
+
+.bar_progress {
+  flex: 1;
+  border-radius: 5px;
+  margin: 0 20px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bar_progress_knob {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.next {
+  margin-left: 1em;
+}
+
+.previous {
+  margin-right: 1em;
+}
+
+.albumsHeader {
+  margin-top: 1rem;
+}

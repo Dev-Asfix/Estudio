@@ -1,0 +1,39 @@
+body {
+  background-color: #000;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+}
+
+.ball {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 0 0 10px currentColor,
+              0 0 20px currentColor,
+              0 0 30px currentColor,
+              0 0 40px currentColor;
+  mix-blend-mode: screen;
+  transition: transform 0.3s ease-in-out;
+  animation: pulse 2s infinite ease-in-out alternate;
+}
+
+/* Animación de pulso neón */
+@keyframes pulse {
+  from {
+    box-shadow:
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px currentColor;
+    opacity: 0.8;
+  }
+  to {
+    box-shadow:
+      0 0 20px currentColor,
+      0 0 40px currentColor,
+      0 0 60px currentColor,
+      0 0 80px currentColor;
+    opacity: 1;
+  }
+}
